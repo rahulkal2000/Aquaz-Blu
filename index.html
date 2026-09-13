@@ -3,16 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquaz Blu - Water Purification & Treatment Solutions Bangalore</title>
-  <meta name="description" content="Premium water treatment systems - RO plants, softeners, sand filters, swimming pool filters. Domestic, Industrial & Commercial solutions in Bangalore & Karnataka.">
+  <title>Aqua'z Blu | RO Plants, Water Softeners & Pool Filters in Bangalore</title>
+  <meta name="description" content="Aqua'z Blu — Premium RO plants, water softeners, sand filters & swimming pool filtration systems in Bangalore. Domestic, commercial & industrial solutions. Free water testing & installation. Call +91 8660466602.">
+  <meta name="keywords" content="RO plant Bangalore, water softener Bangalore, water treatment Bangalore, sand filter Bangalore, swimming pool filter Bangalore, Aquaz Blu">
+  <meta name="author" content="Aqua'z Blu">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (for WhatsApp / Facebook share previews) -->
+  <meta property="og:title" content="Aqua'z Blu | Water Treatment Solutions in Bangalore">
+  <meta property="og:description" content="RO Plants, Water Softeners, Sand Filters & Pool Filtration. Free water testing & installation across Bangalore.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rahulkal2000.github.io/Aquaz-Blu/">
+  <meta property="og:image" content="https://rahulkal2000.github.io/Aquaz-Blu/images/ro-plant.jpg">
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="kClkg8mLGgWDsPiJdnruVQEhRz40pvWKR9ImpaJFPI4" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- WebSite Schema (tells Google the site name) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Aqua'z Blu",
+    "alternateName": "Aquaz Blu",
+    "url": "https://rahulkal2000.github.io/Aquaz-Blu/"
+  }
+  </script>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aqua'z Blu",
+    "telephone": "+918660466602",
+    "url": "https://rahulkal2000.github.io/Aquaz-Blu/",
+    "image": "https://rahulkal2000.github.io/Aquaz-Blu/images/ro-plant.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Bangalore, Karnataka",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Su 09:00-21:00"
+  }
+  </script>
 </head>
 <body>
 
 <!-- HEADER & NAVIGATION -->
 <header>
   <div class="nav-container">
-    <div class="logo">Aquaz <span>Blu</span></div>
+    <div class="logo">Aqua'z <span>Blu</span></div>
     <nav class="nav-menu">
       <a href="#products">Products</a>
       <a href="#services">Services</a>
@@ -21,7 +71,7 @@
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-ctas">
-      <a href="https://wa.me/8660466602" class="btn-ghost">Chat</a>
+      <a href="https://wa.me/918660466602" class="btn-ghost">Chat</a>
       <a href="tel:+918660466602" class="btn-primary">Call Now</a>
     </div>
   </div>
@@ -36,7 +86,7 @@
       Advanced water treatment systems for residential, industrial, and commercial needs across Bangalore and Karnataka. Get crystal-clear, healthy water with our certified RO plants, softeners, and filtration systems. Free water testing and installation included!
     </p>
     <div class="hero-actions">
-      <a href="https://wa.me/8660466602" class="btn-hero-primary">Get Free Water Test</a>
+      <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20free%20water%20test%20in%20Bangalore." class="btn-hero-primary">Get Free Water Test</a>
       <a href="#products" class="btn-hero-ghost">Explore Products</a>
     </div>
     <div class="hero-trust">
@@ -59,10 +109,10 @@
     <div class="capacity-card">
       <div class="cap-header">RO CAPACITY OPTIONS</div>
       <div class="cap-tabs">
-        <button class="cap-tab active">100 LPH</button>
-        <button class="cap-tab">250 LPH</button>
-        <button class="cap-tab">500 LPH</button>
-        <button class="cap-tab">1000+ LPH</button>
+        <button class="cap-tab active" data-cap="100" data-type="Domestic" data-price="75,000">100 LPH</button>
+        <button class="cap-tab" data-cap="250" data-type="Domestic/Commercial" data-price="90,000">250 LPH</button>
+        <button class="cap-tab" data-cap="500" data-type="Industrial" data-price="1,20,000">500 LPH</button>
+        <button class="cap-tab" data-cap="1000+" data-type="Commercial" data-price="1,80,000">1000+ LPH</button>
       </div>
       <div class="cap-display">
         <div class="cap-lph">100 <span style="font-size: 1.2rem;">LPH</span></div>
@@ -70,7 +120,7 @@
         <div class="cap-specs">
           <div class="spec-row">
             <span class="spec-label">Type</span>
-            <span class="spec-value">Domestic</span>
+            <span class="spec-value" id="cap-type">Domestic</span>
           </div>
           <div class="spec-row">
             <span class="spec-label">Warranty</span>
@@ -94,7 +144,7 @@
           <span class="use-tag">Manual</span>
         </div>
       </div>
-      <a href="https://wa.me/8660466602" class="cap-cta">Get Quote</a>
+      <a href="https://wa.me/918660466602" class="cap-cta" id="cap-cta">Get Quote</a>
     </div>
   </div>
 </section>
@@ -117,202 +167,145 @@
   <div class="section-eyebrow">OUR PRODUCT RANGE</div>
   <h2 class="section-title">Water Treatment Systems</h2>
   <p class="section-sub">Complete water treatment solutions with automatic, semi-automatic, and manual options available for all systems.</p>
-  
+
   <!-- RO PLANTS -->
   <div style="margin-bottom: 4rem;">
-    <h3 style="color: var(--cyan); font-size: 1.4rem; margin-bottom: 2rem; font-weight: 600;">RO Plants (Domestic • Industrial • Commercial)</h3>
+    <h3 class="products-subhead">RO Plants (Domestic • Industrial • Commercial)</h3>
     <div class="products-grid">
+
       <div class="product-cell">
-        <div class="product-icon">💧</div>
+        <div class="product-img">
+          <img src="images/domestic-ro.jpg" alt="100 LPH domestic RO plant installation in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">100 LPH RO Plant</div>
         <p class="product-desc">Perfect for small homes and offices</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Capacity:</span>
-            <span class="spec-mini-val">100 LPH</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Domestic</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Price:</span>
-            <span class="spec-mini-val">₹75,000</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Capacity:</span><span class="spec-mini-val">100 LPH</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Domestic</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20100%20LPH%20RO%20plant." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">💧</div>
+        <div class="product-img">
+          <img src="images/ro-plant.jpg" alt="250 LPH RO plant for offices in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">250 LPH RO Plant</div>
         <p class="product-desc">Ideal for small offices and lodges</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Capacity:</span>
-            <span class="spec-mini-val">250 LPH</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Domestic/Commercial</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Price:</span>
-            <span class="spec-mini-val">₹90,000</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Capacity:</span><span class="spec-mini-val">250 LPH</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Domestic/Commercial</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20250%20LPH%20RO%20plant." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">⚡</div>
+        <div class="product-img">
+          <img src="images/industrial-ro.jpg" alt="500 LPH industrial RO plant in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">500 LPH RO Plant</div>
         <p class="product-desc">Commercial & industrial applications</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Capacity:</span>
-            <span class="spec-mini-val">500 LPH</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Industrial</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Price:</span>
-            <span class="spec-mini-val">₹1,20,000</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Capacity:</span><span class="spec-mini-val">500 LPH</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Industrial</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20500%20LPH%20RO%20plant." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">⚡</div>
+        <div class="product-img">
+          <img src="images/industrial-ro.jpg" alt="1000 LPH commercial RO plant for hotels" loading="lazy">
+        </div>
         <div class="product-name">1000 LPH RO Plant</div>
         <p class="product-desc">Hotels and resorts solution</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Capacity:</span>
-            <span class="spec-mini-val">1000 LPH</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Commercial</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Price:</span>
-            <span class="spec-mini-val">₹1,80,000</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Capacity:</span><span class="spec-mini-val">1000 LPH</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Commercial</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%201000%20LPH%20RO%20plant." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">🏆</div>
+        <div class="product-img">
+          <img src="images/industrial-ro.jpg" alt="2000 LPH large scale industrial RO plant in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">2000 LPH RO Plant</div>
         <p class="product-desc">Large scale industrial & residential</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Capacity:</span>
-            <span class="spec-mini-val">2000 LPH</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Industrial</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Price:</span>
-            <span class="spec-mini-val">₹2,75,000</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Capacity:</span><span class="spec-mini-val">2000 LPH</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Industrial</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%202000%20LPH%20RO%20plant." class="product-cta">Get Quote →</a>
       </div>
+
     </div>
   </div>
 
   <!-- SOFTENERS & SAND FILTERS -->
   <div style="margin-bottom: 4rem;">
-    <h3 style="color: var(--cyan); font-size: 1.4rem; margin-bottom: 2rem; font-weight: 600;">Water Softeners & Sand Filters</h3>
+    <h3 class="products-subhead">Water Softeners & Sand Filters</h3>
     <div class="products-grid">
+
       <div class="product-cell">
-        <div class="product-icon">💧</div>
+        <div class="product-img">
+          <img src="images/water-softener.jpg" alt="Automatic water softener for borewell water in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">Water Softener</div>
         <p class="product-desc">Remove hardness, perfect for gardening and general use</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Ion Exchange</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Application:</span>
-            <span class="spec-mini-val">Multi-purpose</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Call for:</span>
-            <span class="spec-mini-val">Pricing</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Ion Exchange</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Application:</span><span class="spec-mini-val">Multi-purpose</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20water%20softener." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">🌊</div>
+        <div class="product-img">
+          <img src="images/sand-filter.jpg" alt="Sand and carbon filter for borewell water in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">Sand Filter</div>
         <p class="product-desc">Carbon and sand filtration for pre-treatment</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Carbon + Sand</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Stage:</span>
-            <span class="spec-mini-val">Pre-Treatment</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Call for:</span>
-            <span class="spec-mini-val">Pricing</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Carbon + Sand</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Stage:</span><span class="spec-mini-val">Pre-Treatment</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20sand%20filter." class="product-cta">Get Quote →</a>
       </div>
+
     </div>
   </div>
 
   <!-- SWIMMING POOL FILTERS -->
   <div>
-    <h3 style="color: var(--cyan); font-size: 1.4rem; margin-bottom: 2rem; font-weight: 600;">Swimming Pool Filtration Systems</h3>
+    <h3 class="products-subhead">Swimming Pool Filtration Systems</h3>
     <div class="products-grid">
+
       <div class="product-cell">
-        <div class="product-icon">🏊</div>
+        <div class="product-img">
+          <img src="images/pool-filter.jpg" alt="Swimming pool sand filter system in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">Pool Sand Filter</div>
         <p class="product-desc">Professional grade pool water filtration</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Sand Media</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Filtration:</span>
-            <span class="spec-mini-val">25 Microns</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Call for:</span>
-            <span class="spec-mini-val">Details</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Sand Media</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Filtration:</span><span class="spec-mini-val">25 Microns</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20pool%20sand%20filter." class="product-cta">Get Quote →</a>
       </div>
 
       <div class="product-cell">
-        <div class="product-icon">🏊</div>
+        <div class="product-img">
+          <img src="images/pool-filter.jpg" alt="Swimming pool cartridge filter in Bangalore" loading="lazy">
+        </div>
         <div class="product-name">Pool Cartridge Filter</div>
         <p class="product-desc">Advanced cartridge filtration system</p>
         <div class="product-specs-mini">
-          <div class="spec-mini">
-            <span class="spec-mini-label">Type:</span>
-            <span class="spec-mini-val">Cartridge Media</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Filtration:</span>
-            <span class="spec-mini-val">10 Microns</span>
-          </div>
-          <div class="spec-mini">
-            <span class="spec-mini-label">Call for:</span>
-            <span class="spec-mini-val">Details</span>
-          </div>
+          <div class="spec-mini"><span class="spec-mini-label">Type:</span><span class="spec-mini-val">Cartridge Media</span></div>
+          <div class="spec-mini"><span class="spec-mini-label">Filtration:</span><span class="spec-mini-val">10 Microns</span></div>
         </div>
+        <a href="https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20pool%20cartridge%20filter." class="product-cta">Get Quote →</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -320,11 +313,11 @@
 <!-- WHY US SECTION -->
 <section class="section-full" id="why-us">
   <div class="inner">
-    <div class="section-eyebrow">WHY CHOOSE AQUAZ BLU</div>
+    <div class="section-eyebrow">WHY CHOOSE AQUA'Z BLU</div>
     <h2 class="section-title">Your Trusted Water Treatment Partner</h2>
     <p class="section-sub">Serving Bangalore and Karnataka with premium water solutions for homes, apartments, resorts, hotels, and industries.</p>
-    
-    <div class="roi-feature-list">
+
+    <ul class="roi-feature-list">
       <li>
         <div class="roi-feat-icon">✓</div>
         <div class="roi-feat-text">
@@ -349,8 +342,8 @@
       <li>
         <div class="roi-feat-icon">✓</div>
         <div class="roi-feat-text">
-          <h4>Paid Maintenance Services</h4>
-          <p>Annual AMC and maintenance plans for existing systems</p>
+          <h4>Maintenance & AMC Services</h4>
+          <p>Annual maintenance plans for existing systems</p>
         </div>
       </li>
       <li>
@@ -367,7 +360,7 @@
           <p>Special discounts for apartments, construction companies & resorts</p>
         </div>
       </li>
-    </div>
+    </ul>
   </div>
 </section>
 
@@ -376,7 +369,7 @@
   <div class="section-eyebrow">COVERAGE AREAS</div>
   <h2 class="section-title">Serving Greater Bangalore & Karnataka</h2>
   <p class="section-sub">We provide installations and maintenance across all major areas of Bangalore and surrounding regions in Karnataka.</p>
-  
+
   <div class="areas-grid">
     <div class="area-chip">Whitefield</div>
     <div class="area-chip">Koramangala</div>
@@ -401,8 +394,8 @@
     <div class="section-eyebrow">WHO WE SERVE</div>
     <h2 class="section-title">Our Target Customers</h2>
     <p class="section-sub">Water treatment solutions tailored for every requirement.</p>
-    
-    <div class="roi-feature-list">
+
+    <ul class="roi-feature-list">
       <li>
         <div class="roi-feat-icon">🏠</div>
         <div class="roi-feat-text">
@@ -445,7 +438,7 @@
           <p>Large capacity systems for manufacturing and processing</p>
         </div>
       </li>
-    </div>
+    </ul>
   </div>
 </section>
 
@@ -454,43 +447,25 @@
   <div class="section-eyebrow">OUR WORK</div>
   <h2 class="section-title">Product & Installation Gallery</h2>
   <p class="section-sub">See our installations across Bangalore and Karnataka.</p>
-  
+
   <div class="gallery-grid">
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>RO Plant Installation</p>
-      </div>
+      <img src="images/gallery-1.jpg" alt="RO plant installation in Bangalore by Aqua'z Blu" loading="lazy">
     </div>
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>Domestic RO System</p>
-      </div>
+      <img src="images/gallery-2.jpg" alt="Domestic RO system installed in Bangalore apartment" loading="lazy">
     </div>
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>Industrial Plant</p>
-      </div>
+      <img src="images/gallery-3.jpg" alt="Industrial water treatment plant installation in Bangalore" loading="lazy">
     </div>
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>Water Softener</p>
-      </div>
+      <img src="images/gallery-4.jpg" alt="Automatic water softener installation in Bangalore" loading="lazy">
     </div>
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>Pool Filter System</p>
-      </div>
+      <img src="images/gallery-5.jpg" alt="Swimming pool filter system installation in Bangalore" loading="lazy">
     </div>
     <div class="gallery-item">
-      <div class="gallery-placeholder">
-        <div style="font-size: 2rem;">📷</div>
-        <p>Sand Filter Setup</p>
-      </div>
+      <img src="images/gallery-6.jpg" alt="Sand filter setup for borewell water in Bangalore" loading="lazy">
     </div>
   </div>
 </section>
@@ -499,7 +474,7 @@
 <section class="section" id="faq">
   <div class="section-eyebrow">QUESTIONS & ANSWERS</div>
   <h2 class="section-title">Frequently Asked Questions</h2>
-  
+
   <div class="faq-list">
     <details class="faq-item">
       <summary>What is included in the free water test visit?</summary>
@@ -558,12 +533,12 @@
     <div class="section-eyebrow">OUR REFERENCES</div>
     <h2 class="section-title">Trusted by Major Customers in Bangalore</h2>
     <p class="section-sub">We have successfully installed water treatment systems for leading companies, hotels, resorts, and residential complexes across Bangalore.</p>
-    
+
     <div class="references-text">
       <p style="font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.5rem;">
         Contact us for a detailed list of our reference customers in Bangalore. We're proud to have served major corporations, luxury resorts, premium hotels, residential complexes, and industrial facilities across the city. Our customers trust us for reliable, long-term water treatment solutions.
       </p>
-      <a href="https://wa.me/8660466602" class="btn-hero-primary" style="display: inline-block;">Request Reference List</a>
+      <a href="https://wa.me/918660466602?text=Hi%2C%20please%20send%20your%20reference%20list." class="btn-hero-primary" style="display: inline-block;">Request Reference List</a>
     </div>
   </div>
 </section>
@@ -575,8 +550,8 @@
     <p>Get your FREE water testing & professional installation today. Serving Bangalore & Karnataka with premium water treatment solutions.</p>
   </div>
   <div class="cta-btns">
-    <a href="https://wa.me/8660466602" class="btn-wa">💬 WhatsApp Us</a>
-    <a href="tel:+918660466602" class="btn-tel">📞 8660466602</a>
+    <a href="https://wa.me/918660466602" class="btn-wa">💬 WhatsApp Us</a>
+    <a href="tel:+918660466602" class="btn-tel">📞 +91 8660466602</a>
   </div>
 </div>
 
@@ -584,7 +559,7 @@
 <section class="section">
   <div class="section-eyebrow">GET IN TOUCH</div>
   <h2 class="section-title">Contact Information</h2>
-  
+
   <div class="contact-strip">
     <div class="contact-cell">
       <div class="contact-cell-label">PHONE</div>
@@ -592,7 +567,7 @@
     </div>
     <div class="contact-cell">
       <div class="contact-cell-label">WHATSAPP</div>
-      <a href="https://wa.me/8660466602" class="contact-cell-val">+91 8660466602</a>
+      <a href="https://wa.me/918660466602" class="contact-cell-val">+91 8660466602</a>
     </div>
     <div class="contact-cell">
       <div class="contact-cell-label">SERVICE AREA</div>
@@ -608,7 +583,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-row">
-    <div class="footer-logo">Aquaz <span>Blu</span></div>
+    <div class="footer-logo">Aqua'z <span>Blu</span></div>
     <div class="footer-links">
       <a href="#products">Products</a>
       <a href="#services">Services</a>
@@ -619,73 +594,32 @@
     </div>
   </div>
   <div class="footer-copy">
-    <p>&copy; 2024 Aquaz Blu. Water Treatment Solutions for Bangalore & Karnataka.</p>
-    <p>Premium RO Plants • Softeners • Pool Filters • Industrial Systems</p>
+    <p>&copy; 2026 Aqua'z Blu. Water Treatment Solutions for Bangalore & Karnataka.</p>
+    <p>RO Plants • Softeners • Pool Filters • Industrial Systems</p>
   </div>
 </footer>
 
-<style>
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .gallery-item {
-    background: var(--navy2);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-
-  .gallery-placeholder {
-    aspect-ratio: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 212, 255, 0.05);
-    color: var(--mid);
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .references-text {
-    background: rgba(0, 212, 255, 0.08);
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-  }
-
-  @media (max-width: 768px) {
-    .gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-</style>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/918660466602?text=Hi%2C%20I%20am%20interested%20in%20your%20water%20treatment%20systems." class="floating-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
-  // Mobile menu toggle
-  const navContainer = document.querySelector('.nav-container');
-  const menuBtn = document.querySelector('.menu-toggle');
-  
-  if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      navContainer.classList.toggle('active');
-    });
-  }
-
   // Capacity card tab switching
   const capTabs = document.querySelectorAll('.cap-tab');
-  capTabs.forEach((tab, index) => {
-    tab.addEventListener('click', function() {
+  const capLph = document.querySelector('.cap-lph');
+  const capType = document.getElementById('cap-type');
+  const capCta = document.getElementById('cap-cta');
+
+  capTabs.forEach((tab) => {
+    tab.addEventListener('click', function () {
       capTabs.forEach(t => t.classList.remove('active'));
       this.classList.add('active');
-      
-      const capacities = ['100', '250', '500', '1000+'];
-      const prices = ['₹75,000', '₹90,000', '₹1,20,000', '₹1,80,000'];
-      
-      document.querySelector('.cap-lph').innerHTML = capacities[index] + ' <span style="font-size: 1.2rem;">LPH</span>';
+
+      const cap = this.dataset.cap;
+      const type = this.dataset.type;
+
+      capLph.innerHTML = cap + ' <span style="font-size: 1.2rem;">LPH</span>';
+      capType.textContent = type;
+      capCta.href = 'https://wa.me/918660466602?text=Hi%2C%20I%20want%20a%20quote%20for%20' + encodeURIComponent(cap + ' LPH RO plant.');
     });
   });
 </script>
